@@ -40,17 +40,30 @@
          * $result = 50 / 2;
          * echo $result;
          */
-        // TO DO
-        $decodedMessage1 = $message1;
-        // TO DO
-        $decodedMessage2 = $message2;
-        // TO DO
-        $decodedMessage3 = $message3;
+        // TO DO message 1
+        $leng = strlen($message1) / 2;
+        $lengstring = substr($message1,5,$leng);
+        $replacestring = str_replace("@#?"," ",$lengstring);
+        $reversestring = strrev($replacestring);
+        // var_dump($reversestring);
+
+        // TO DO message 2
+        $leng2 = strlen($message2) / 2;
+        $lengstring2 = substr($message2,5,$leng2);
+        $replacestring2 = str_replace("@#?"," ",$lengstring2);
+        $reversestring2 = strrev($replacestring2);
+        // var_dump($reversestring2);
+        // TO DO message 3
+        $leng3 = strlen($message3) / 2;
+        $lengstring3 = substr($message3,5,$leng3);
+        $replacestring3 = str_replace("@#?"," ",$lengstring3);
+        $reversestring3 = strrev($replacestring3);
+        // var_dump($reversestring3);
         ?>
         <p>résultats:</p>
-        <p>message1: <?php echo $decodedMessage1 ?><br>
-            message2: <?php echo $decodedMessage2 ?><br>
-            message3: <?php echo $decodedMessage3 ?><br>
+        <p>message1: <?php echo $reversestring ?><br>
+            message2: <?php echo $reversestring2 ?><br>
+            message3: <?php echo $reversestring3 ?><br>
         </p>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
