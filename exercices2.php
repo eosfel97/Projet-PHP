@@ -52,7 +52,6 @@
             message2: <?php echo $decodedMessage2 ?><br>
             message3: <?php echo $decodedMessage3 ?><br>
         </p>
-
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>
