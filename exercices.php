@@ -20,6 +20,7 @@
         <li><a href="/exercices3.php">exercice 3</a>:travailler avec des tableaux</li>
         <li><a href="/exercices4.php">exercice 4</a>:travailler avec des tableaux</li>
         <li><a href="/exercices5.php">exercice 5</a>:travailler avec des formulaires</li>
+        <li><a href="/exercices6.php">exercice 6</a>:boucles et jeux</li>
     </ol>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
