@@ -18,6 +18,8 @@
         <li>primier exo: si vous voyez ce site ,c'est que c'est fait</li>
         <li><a href="/exercices2.php">exercice 2</a>: décoder des chaines de caractére</li>
         <li><a href="/exercices3.php">exercice 3</a>:travailler avec des tableaux</li>
+        <li><a href="/exercices4.php">exercice 4</a>:travailler avec des tableaux</li>
+        <li><a href="/exercices5.php">exercice 5</a>:travailler avec des formulaires</li>
     </ol>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>

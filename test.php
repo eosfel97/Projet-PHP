@@ -14,23 +14,7 @@
  ?>
 <div class="container">
     <h1>test php  page </h1>
-    <pre>
 
-
-
-    <?php
-    // je suis un commentaire
-    $var = "coucou";
-    $var2 = "youhou";
-    $var3 = $var;
-    $var = "oups";
-    $var2 = $var3; 
-        echo $var2;
-    ?>
-
-
-
-    </pre>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>
