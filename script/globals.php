@@ -1,4 +1,3 @@
 <?php
-define('DBJSON', './');
+define('DBJSON', './data/jsonDB.json');
 define('DBTABLE', ['note']);
-include('./script/')

@@ -1,6 +1,7 @@
 <?php
-include "./script/function8s.php";
+include "script/function8s.php";
 $data = openBD();
+
 if (!empty($_POST)) {
     $securized = treatFormData(
         $_POST,
@@ -9,11 +10,13 @@ if (!empty($_POST)) {
     );
     extract($securized, EXTR_OVERWRITE);
 }
-if (isset($title, $notes)) {
+// var_dump($note, $title);
+if (isset($title, $note)) {
     array_push($data['note'], [
         'title' => $title,
         'note' => $note,
     ]);
+    // var_dump($data);
     WriteBD($data);
 }
 $notes = $data["note"];
@@ -68,8 +71,8 @@ if ($notes):
             </div>
         <?php else: // if no note
     ?>
-							            <p>Vous n'avez pas encore de note</p>
-							        <?php endif?>
+													            <p>Vous n'avez pas encore de note</p>
+													        <?php endif?>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>

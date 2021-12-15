@@ -1,5 +1,5 @@
 <?php
-include "./script/globals.php";
+include "globals.php";
 // securisation des datas envoyer
 function treatFormData(array $data, string...$wanted): array
 {
@@ -16,8 +16,8 @@ function treatFormData(array $data, string...$wanted): array
 // extrait les donné de json
 function openBD(): array
 {
-    $data = file_get_contents(DBJSON);
-    $array = json_decode($data, true);
+    $data = json_decode(file_get_contents(DBJSON), true);
+    $array = $data;
     if (!$array) {
         $array = [];
     }
