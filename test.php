@@ -10,11 +10,10 @@
     <title>test</title>
   </head>
   <body>
-  <?php include_once("./partial/_navBar.php") 
- ?>
+  <?php include_once "./partial/_navBar.php"
+?>
 <div class="container">
     <h1>test php  page </h1>
-
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>
