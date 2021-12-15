@@ -12,49 +12,49 @@
     <title>exo 6</title>
   </head>
   <body>
-  <?php include_once("./partial/_navBar.php") 
- ?>
+  <?php include_once "./partial/_navBar.php"
+?>
 <div class="container">
 <h1>Exercice 6</h1>
        <?php
-       $code = hexdec("223a");
-       $result = "tout les gagnants ont joué, essayez";
-       $response = "";
-       if (!empty($_POST)) {
-           if ($_POST["try"]) {
-               $try = strip_tags($_POST["try"]);
-           }
-           if (isset($try)) {
-               if ($code == $try) {
-                   $result = "bien joué, le code est $try";
-               } else {
-                   $result = "non, le code n'est pas $try";
-               }
-           }
-       }
-       // TO DO with while
-       $test = 0;
-       $continue =true;
-       $noInfinitloop = 10000;
-       while($continue){
-         if ($test==$code) {
-           $continue= false;
-           $response = strval($test);
-         }else{
-           $test ++;
-         }
-         if($noInfinitloop<0){
-           $continue=false;
-           $response= "boucle infini";
-         }
-         $noInfinitloop--;
-       }
-       
-       ?>
+$code = hexdec("223a");
+$result = "tout les gagnants ont joué, essayez";
+$response = "";
+if (!empty($_POST)) {
+    if ($_POST["try"]) {
+        $try = strip_tags($_POST["try"]);
+    }
+    if (isset($try)) {
+        if ($code == $try) {
+            $result = "bien joué, le code est $try";
+        } else {
+            $result = "non, le code n'est pas $try";
+        }
+    }
+}
+// TO DO with while
+$test = 0;
+$continue = true;
+$noInfinitloop = 10000;
+while ($continue) {
+    if ($test == $code) {
+        $continue = false;
+        $response = strval($test);
+    } else {
+        $test++;
+    }
+    if ($noInfinitloop < 0) {
+        $continue = false;
+        $response = "boucle infini";
+    }
+    $noInfinitloop--;
+}
+
+?>
        <p>le code à trouver est fixe, tentez votre chance ou faites en sorte que la machine vous aide à trouver la bonne réponse</p>
-       <?php if ($response) : ?>
+       <?php if ($response): ?>
            <p>la réponse est : <?php echo $response; ?></p>
-       <?php endif ?>
+       <?php endif?>
        <form method="post">
            <div class="form-group">
                <label class="col-form-label" for="try">trouver le code</label>

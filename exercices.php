@@ -10,8 +10,8 @@
     <title>exercices</title>
   </head>
   <body>
-  <?php include_once("./partial/_navBar.php") 
- ?>
+  <?php include_once "./partial/_navBar.php"
+?>
 <div class="container">
     <h1>exo page</h1>
     <ol>
