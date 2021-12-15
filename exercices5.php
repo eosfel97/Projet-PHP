@@ -1,15 +1,4 @@
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <title>page vide!</title>
-  </head>
-  <body>
-  <?php include_once "./partial/_navBar.php"
-?>
-<?php
+      <?php
 if (!empty($_POST)) {
     if ($_POST["message"]) {
         $message = strip_tags($_POST["message"]);
@@ -23,6 +12,19 @@ if (!empty($_POST)) {
 if ($_POST["messagecode"]) {
     $encodedMessage = $_POST["messagecode"];
 }
+?>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>page vide!</title>
+  </head>
+  <body>
+  <?php include_once "./partial/_navBar.php"
+?>
+<?php
 // :::::::::::::::::::::::::::::::::::::::::: message mais pas clé ou code mais pas clé
 if ((!$key && $message) || (!$key && $encodedMessage)) {
     $errormsg = " vous devez rentrer la clé ";
@@ -79,18 +81,19 @@ if ($message && $key) {
                 $lineTOdecode = $caratab[$i];
                 if ($vigenere[$lineTOdecode][$keyLetter] == $letterTodecode) {
                     $decryptedMessage[] = $lineTOdecode;
-                } else {
-                    $decryptedMessage[] = " ";
                 }
-                $keycounter++;
             }
-            $message = implode($decryptedMessage);
+        } else {
+            $decryptedMessage[] = " ";
         }
+        $keycounter++;
 
     }
+    $message = implode($decryptedMessage);
 }
 
 ?>
+
 
 
 

@@ -64,13 +64,13 @@ if (!empty($_POST)) {
   <button class="btn btn-primary" type="submit">ViGENERISER</button>
   </div>
 </form>
-<p>===============================================</p>
+<p>//////////////////////////////////////////////////////////////</p>
 <?php if ($result): ?>
   <p>le texte : <?php echo $text; ?> <br>
   avec la clé : <?php echo $key; ?> <br>
   renvoie le résultat:  <?php echo $result; ?></p>
 <?php endif?>
-
+<p>//////////////////////////////////////////////////////////////</p>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>
