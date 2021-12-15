@@ -1,7 +1,6 @@
 <?php
 include "./script/function8s.php";
 $data = openBD();
-var_dump($data);
 if (!empty($_POST)) {
     $securized = treatFormData(
         $_POST,
@@ -69,8 +68,8 @@ if ($notes):
             </div>
         <?php else: // if no note
     ?>
-						            <p>Vous n'avez pas encore de note</p>
-						        <?php endif?>
+							            <p>Vous n'avez pas encore de note</p>
+							        <?php endif?>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>

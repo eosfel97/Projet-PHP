@@ -3,7 +3,7 @@ include "./script/globals.php";
 // securisation des datas envoyer
 function treatFormData(array $data, string...$wanted): array
 {
-    $valus = [];
+    $values = [];
     foreach ($wanted as $value) {
         if (array_key_exists($value, $data)) {
             $actualData = stripslashes(($data[$value]));
@@ -16,8 +16,8 @@ function treatFormData(array $data, string...$wanted): array
 // extrait les donné de json
 function openBD(): array
 {
-    $data = json_decode(file_get_contents(DBJSON), true);
-    $array = $data;
+    $data = file_get_contents(DBJSON);
+    $array = json_decode($data, true);
     if (!$array) {
         $array = [];
     }
