@@ -23,6 +23,12 @@
         <li class="nav-item">
           <a class="nav-link active" href="/inscription.php">inscription</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/connection.php">connection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/deconnection.php">deconnection</a>
+        </li>
       </ul>
     </div>
   </div>

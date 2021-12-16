@@ -19,6 +19,7 @@ $carat = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 $caratab = str_split($carat);
 $doublecarat = array_merge($caratab, $caratab);
 $sizecaratab = count($caratab);
+var_dump($sizecaratab);
 for ($i = 0; $i < $sizecaratab; $i++) {
     for ($j = 0; $j < $sizecaratab; $j++) {
         $line = $caratab[$i];
