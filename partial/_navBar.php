@@ -31,6 +31,9 @@
 					 <a class="nav-link active" href="/admin.php">admin</a>
 		      </li>
 					 <?php endif?>
+           <li class="nav-item">
+             <a class="nav-link active " href="/compte.php">mon compte</a>
+           </li>
 	        <li class="nav-item">
 	          <a class="nav-link active btn btn-dark" href="/deconnection.php">deconnection</a>
 	        </li>
