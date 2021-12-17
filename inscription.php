@@ -11,17 +11,32 @@ if (!empty($_POST)) {
     );
     extract($securized, EXTR_OVERWRITE);
     $data = openBD();
-    $hashPass = password_hash($password, PASSWORD_ARGON2ID);
-    // var_dump($data);
-    array_push($data['user'], [
-        "email" => $email,
-        "name" => $name,
-        "firstname" => $firstname,
-        "password" => $hashPass,
-        "role" => ['ROLE_USER'],
-    ]);
-    WriteBD($data);
-    header("Location: /connection.php");
+    $users = $data["user"];
+    $idUser = -404;
+    foreach($users as $id =>$user){
+      if ($email == $user["email"]){
+        $idUser = $id;
+      }
+    }
+if($idUser == -404 ){
+
+  $hashPass = password_hash($password, PASSWORD_ARGON2ID);
+  // var_dump($data);
+  array_push($data['user'], [
+      "email" => $email,
+      "name" => $name,
+      "firstname" => $firstname,
+      "password" => $hashPass,
+      "role" => ['ROLE_USER'],
+  ]);
+  WriteBD($data);
+  header("Location: /connection.php");
+}else{
+  $errormsg = " cette adresse mail est déjà utilisée par un menbres";
+}
+
+
+
 }
 ?>
 <!doctype html>
@@ -37,6 +52,12 @@ if (!empty($_POST)) {
   <?php include_once "./partial/_navBar.php"
 ?>
 <div class="container">
+<?php if ($errormsg ?? false): ?>
+<div class="alert alert-dismissible alert-danger">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <strong><?php echo $errormsg ?></strong>
+</div>
+<?php endif?>
 <form method="POST">
 <div class="form-group col-md-10 mt-5">
     <input type="text" class="form-control rounded-pill"  aria-describedby="emailHelp" placeholder="Enter name" name="name">

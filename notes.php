@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fr">
   <head>
@@ -10,8 +13,8 @@
     <title>notes</title>
   </head>
   <body>
-  <?php include_once("./partial/_navBar.php") 
- ?>
+  <?php include_once "./partial/_navBar.php"
+?>
 <div class="container">
     <h1>page de prise de note</h1>
 </div>

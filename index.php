@@ -1,6 +1,6 @@
 <?php
 session_start();
-// var_dump($_SESSION);
+$nameUtilisateur = $_SESSION["user"]["name"] ?? "";
 ?>
 <!doctype html>
 <html lang="fr">
@@ -11,10 +11,16 @@ session_start();
     <title>gnahiet any</title>
   </head>
   <body>
- <?php include_once("./partial/_navBar.php") 
- ?>
+ <?php include_once "./partial/_navBar.php"
+?>
 <div class="container">
-    <h1>Le site de gnahiet any</h1>
+  <?php
+echo "<h1>Le site de gnahiet any</h1>";
+if ($_SESSION["user"] ?? false) {
+
+    echo "<h1>Bienvenu $nameUtilisateur  sur mon site</h1> ";
+}
+?>
 
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>

@@ -1,3 +1,6 @@
+<?php
+// var_dump($_SESSION["user"]);
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Gnahiet any</a>
@@ -20,18 +23,18 @@
         <li class="nav-item">
           <a class="nav-link active" href="/notes.php">notes</a>
         </li>
-        <?php if ($_SESSION["user"]):
+        <?php if ($_SESSION["user"] ?? false):
     if (in_array("ROLE_ADMIN", $_SESSION["user"]["role"])):
 
     ?>
+					<li class="nav-item">
+					 <a class="nav-link active" href="/admin.php">admin</a>
+		      </li>
+					 <?php endif?>
 	        <li class="nav-item">
-	          <a class="nav-link active" href="/admin.php">admin</a>
+	          <a class="nav-link active btn btn-dark" href="/deconnection.php">deconnection</a>
 	        </li>
-	        <?php endif?>
-        <li class="nav-item">
-          <a class="nav-link active btn btn-dark" href="/deconnection.php">deconnection</a>
-        </li>
-        <?php else: ?>
+	        <?php else: ?>
         <li class="nav-item">
           <a class="nav-link active btn btn-success" href="/connection.php">connection</a>
         </li>

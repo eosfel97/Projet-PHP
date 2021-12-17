@@ -13,25 +13,25 @@ if (!empty($_POST)) {
     $correctEmail = false;
     foreach ($users as $user) {
         if ($email == $user['email']) {
-          $correctEmail = true;
-          $canConnect = password_verify($password, $user['password']);
-          if ($canConnect) {
-            $_SESSION["user"] = [
-              "name" => $user["name"],
-              "firstname" => $user["firstname"],
-              "email" => $user["email"],
-              "role"=>$user['role']
-            ];
-            // var_dump($user,$canConnect,$_SESSION);
+            $correctEmail = true;
+            $canConnect = password_verify($password, $user['password']);
+            if ($canConnect) {
+                $_SESSION["user"] = [
+                    "name" => $user["name"],
+                    "firstname" => $user["firstname"],
+                    "email" => $user["email"],
+                    "role" => $user['role'],
+                    "files"=>$user['files'],
+                ];
+                // var_dump($user,$canConnect,$_SESSION);
                 header("Location: /");
                 exit();
-            }
-            else {
-             $badPassword = true;
+            } else {
+                $badPassword = true;
             }
         }
     }
-      $badMessg = "L'email ou le mot de passe est invalide";
+    $badMessg = "L'email ou le mot de passe est invalide";
 }
 
 ?>
@@ -49,7 +49,7 @@ if (!empty($_POST)) {
 ?>
 <div class="container">
     <h1>connection</h1>
-    <?php if ($badMessg): ?>
+    <?php if ($badMessg ?? false): ?>
 <div class="alert alert-dismissible alert-danger">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   <strong><?php echo $badMessg ?></strong>

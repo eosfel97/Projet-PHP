@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 require "./script/function.php";
 if (!empty($_POST)) {
     if ($_POST["text"]) {

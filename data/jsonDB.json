@@ -1,1 +1,19 @@
-{"note":[],"user":[{"email":"luffy@onepiece.com","name":"Luffy","firstname":"Monkey.D","password":"$argon2id$v=19$m=65536,t=4,p=1$WVh2RnZIYUN3TzczamZpQw$cNwRfA88R+5HLvssOLDO3b\/O5+GLUz0TMg+HrfBmuWE","role":["ROLE_USER","ROLE_ADMIN"]},{"email":"any.gouba@gmail.com","name":"Gnahiet any","firstname":"gouba","password":"$argon2id$v=19$m=65536,t=4,p=1$SGp4cDVlV1VVUUhmOG9GMA$uRK+5Eiyc4XXNByiHjHZqKlXE2rUmO\/n7UUlxc5oZnc","role":["ROLE_USER"]}]}
+{
+  "note": [],
+  "user": [
+    {
+      "email": "any.gouba@gmail.com",
+      "name": "any",
+      "firstname": "Gnahiet",
+      "password": "$argon2id$v=19$m=65536,t=4,p=1$ekh1QkdPOVBoUDgua3dZMg$KLaHmtpDKLtOhqFjehTr9YkS+ELwyiFLCK7BRhIfjr4",
+      "role": ["ROLE_USER", "ROLE_ADMIN"]
+    },
+    {
+      "email": "luffy@onepiece.com",
+      "name": "Luffy",
+      "firstname": "Monkey.D",
+      "password": "$argon2id$v=19$m=65536,t=4,p=1$QllGbTRVSEVEVkZ1L1JjRA$a0weO4LmUXYQyUJUE2O/NSACTdDb0E6u0Akky4Mq7Sk",
+      "role": ["ROLE_USER"]
+    }
+  ]
+}
