@@ -29,7 +29,7 @@ include "script/function8s.php";
     <?php 
            if (in_array("ROLE_ADMIN", $_SESSION["user"]["role"])) :
            ?>
-    <p class="card-text">fonction: <?php print_r( $user_role[1]) ;?></p>
+   <a href="Edituser.php" class="btn btn-secondary">Editer les utilisateurs</a>
 
     <?php endif?>
     <?php if($user_name)  :?>
