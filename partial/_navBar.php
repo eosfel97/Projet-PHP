@@ -20,15 +20,25 @@
         <li class="nav-item">
           <a class="nav-link active" href="/notes.php">notes</a>
         </li>
+        <?php if ($_SESSION["user"]):
+    if (in_array("ROLE_ADMIN", $_SESSION["user"]["role"])):
+
+    ?>
+	        <li class="nav-item">
+	          <a class="nav-link active" href="/admin.php">admin</a>
+	        </li>
+	        <?php endif?>
+        <li class="nav-item">
+          <a class="nav-link active btn btn-dark" href="/deconnection.php">deconnection</a>
+        </li>
+        <?php else: ?>
+        <li class="nav-item">
+          <a class="nav-link active btn btn-success" href="/connection.php">connection</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" href="/inscription.php">inscription</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/connection.php">connection</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/deconnection.php">deconnection</a>
-        </li>
+        <?php endif?>
       </ul>
     </div>
   </div>

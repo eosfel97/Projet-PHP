@@ -18,6 +18,7 @@ if (!empty($_POST)) {
         "name" => $name,
         "firstname" => $firstname,
         "password" => $hashPass,
+        "role" => ['ROLE_USER'],
     ]);
     WriteBD($data);
     header("Location: /connection.php");

@@ -17,13 +17,8 @@ include "script/function8s.php";
   <?php include_once "./partial/_navBar.php"
 ?>
 <div class="container">
-<?php
-  if($_SESSION['user']){
-    echo "vous etes connecté  ";
-  }else{
-    echo "pensez a vous deconnecter";
-  }
-  ?>
+
+
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>

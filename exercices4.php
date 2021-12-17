@@ -87,7 +87,6 @@ $decodedMessage = implode($decryptedMessage);
     <p>la clé est: <?php echo $key4decode ?></p>
     <p>le résultat est: <?php echo $decodedMessage; ?></p>
 </div>
-
 <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>
 </html>

@@ -20,6 +20,7 @@ if (!empty($_POST)) {
               "name" => $user["name"],
               "firstname" => $user["firstname"],
               "email" => $user["email"],
+              "role"=>$user['role']
             ];
             // var_dump($user,$canConnect,$_SESSION);
                 header("Location: /");
