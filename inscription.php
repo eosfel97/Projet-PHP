@@ -26,6 +26,7 @@ if($idUser == -404 ){
       "email" => $email,
       "name" => $name,
       "firstname" => $firstname,
+      "files"=>"",
       "password" => $hashPass,
       "role" => ['ROLE_USER'],
   ]);

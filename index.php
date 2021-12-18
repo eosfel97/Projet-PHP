@@ -17,10 +17,9 @@ $nameUtilisateur = $_SESSION["user"]["name"] ?? "";
   <?php
 if ($_SESSION["user"] ?? false) {
 
-    echo "<h1>Bienvenu $nameUtilisateur  sur mon site</h1> ";
-}
-?>
-
+    echo "<h1>Bienvenu $nameUtilisateur  sur mon site</h1>";
+  }
+  ?>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>
   </body>

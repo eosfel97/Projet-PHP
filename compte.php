@@ -14,6 +14,7 @@ include "script/function8s.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>mon compte</title>
   </head>
   <body>
@@ -21,7 +22,7 @@ include "script/function8s.php";
  ?>
 <div class="container">
     <h1>Mon compte</h1>
-    <div class="card" >
+    <div class="card bg-danger" >
   <div class="card-body">
     <p class="card-text">Prénom: <?php echo $user_firstname; ?></p>
     <p class="card-text">nom: <?php echo $user_name; ?></p>
@@ -32,7 +33,7 @@ include "script/function8s.php";
    <a href="Edituser.php" class="btn btn-secondary">Editer les utilisateurs</a>
 
     <?php endif?>
-    <?php if($user_name)  :?>
+    <?php if($user_files ?? false)  :?>
     <p class="card-text">Photo de profil : <img src="<?php echo UPLOADFOLDER . $user_files ?>"alt =""></p>
     <?php else : ?>
       <p>vous n'avez pas de photo de profile</p>

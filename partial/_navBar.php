@@ -1,5 +1,4 @@
 <?php
-// var_dump($_SESSION["user"]);
 $nameUtilisateur = $_SESSION["user"]["name"] ?? "";
 $firstnameUtilisateur = $_SESSION["user"]["firstname"] ?? "";
 ?>
