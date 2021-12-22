@@ -23,9 +23,11 @@ session_start();
         <li><a href="/exercices3.php">exercice 3</a>:travailler avec des tableaux</li>
         <li><a href="/exercices4.php">exercice 4</a>:travailler avec des tableaux</li>
         <li><a href="/exercices5.php">exercice 5</a>:travailler avec des formulaires</li>
+        <li><a href="/exercices_5_bis.php">exercice 5bis</a>: </li>
         <li><a href="/exercices6.php">exercice 6</a>:boucles et jeux</li>
         <li><a href="/exercices7.php">exercice 7</a>:function</li>
         <li><a href="/exercices8.php">exercice 8</a>: prise de notes </li>
+        
     </ol>
 </div>
     <script src="/js/bootstrap.bundle.min.js" ></script>

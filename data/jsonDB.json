@@ -1,13 +1,1 @@
-{
-  "note": [],
-  "user": [
-    {
-      "email": "any.gnahiet@yahoo.fr",
-      "name": "any",
-      "firstname": "gouba",
-      "password": "$argon2id$v=19$m=65536,t=4,p=1$bTRKWTJtbHJJTk8vb2ZYQg$Rtwnp4lVT7GWrsUBHJQGK2wWkq3+Hyni/YvpNbN6gdc",
-      "role": ["ROLE_USER", "ROLE_ADMIN"],
-      "files": "t\u00e9l\u00e9chargement-(1)61be2c7012eb2.png"
-    }
-  ]
-}
+{"note":[],"user":[{"email":"yondaime@konoha.com","name":"Minato","firstname":"Namikaze","password":"$argon2id$v=19$m=65536,t=4,p=1$Mnk5Q3ZsL3JQcXI2ZE5Ceg$Z7iBI2jy1uUPuY67kpntGQPAKptpsKrv9vxq+9WUl1c","role":["ROLE_USER"],"files":"Yondaime-Hokage-161c329008ba0b.jpg"}]}

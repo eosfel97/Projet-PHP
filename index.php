@@ -1,6 +1,7 @@
 <?php
 session_start();
 $nameUtilisateur = $_SESSION["user"]["name"] ?? "";
+var_dump($_SESSION);
 ?>
 <!doctype html>
 <html lang="fr">
