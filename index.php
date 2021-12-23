@@ -1,7 +1,8 @@
+<!-- 2.:MwteJdM4S(rL[696~ -->
 <?php
 session_start();
 $nameUtilisateur = $_SESSION["user"]["name"] ?? "";
-var_dump($_SESSION);
+// var_dump($_SESSION);
 ?>
 <!doctype html>
 <html lang="fr">
